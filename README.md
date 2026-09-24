@@ -2,7 +2,7 @@
 
 Independent academic homepage for graduate admissions.
 
-https://dreamerforjay.github.io/grad-application/
+https://杰倫.tw/grad-application/
 
 Content and bilingual translations: index.html. Typography and responsive layout: style.css. Language switch: main.js. CV: assets/Chieh-Lun-Yang-Resume.pdf.
 
