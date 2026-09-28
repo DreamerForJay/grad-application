@@ -37,6 +37,7 @@ section + section { padding-top: 2px; }
 .publication, .project { margin-bottom: 24px; }
 .publication p, .project p { margin: 4px 0; }
 .authors { color: #444; }
+.research-result { color: #444; font-size: .925rem; }
 .inline-links, .more-link { font-size: .875rem; }
 .inline-links { display: flex; flex-wrap: wrap; gap: 5px 16px; }
 .inline-links a + a::before { content: "/"; display: inline-block; margin-right: 16px; color: #999; }
