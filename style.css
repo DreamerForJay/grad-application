@@ -37,8 +37,8 @@ button, select { cursor: pointer; }
 .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
 .site-header.is-scrolled { box-shadow: 0 8px 22px rgba(18,50,74,.08); }
 .site-nav { min-height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.site-name { color: var(--navy); font-weight: 700; font-size: 1.05rem; letter-spacing: .08em; text-decoration: none; }
-.site-name::after { content: ""; display: inline-block; width: 7px; height: 7px; margin-left: 6px; border-radius: 50%; background: var(--orange); }
+.site-name { display: flex; align-items: baseline; gap: 9px; color: var(--navy); font-weight: 700; font-size: 1rem; letter-spacing: -.01em; text-decoration: none; }
+.site-name small { color: var(--muted); font-size: .74rem; font-weight: 500; letter-spacing: .03em; }
 .site-menu { display: flex; align-items: center; gap: clamp(15px, 2vw, 25px); }
 .site-menu a, .site-menu button { position: relative; color: var(--muted); font-size: .88rem; font-weight: 600; text-decoration: none; }
 .site-menu a { padding: 19px 0 17px; }
@@ -94,6 +94,10 @@ h3 a { color: inherit; }
 .research-media img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; transition: filter 200ms ease; }
 .research-media::after { content: ""; position: absolute; inset: 38% 0 0; background: linear-gradient(transparent, rgba(13,33,47,.78)); pointer-events: none; }
 .research-media:hover img { filter: saturate(1.12) contrast(1.03); }
+.research-media-static { margin: 0; color: var(--muted); background: var(--white); }
+.research-media-static::after { display: none; }
+.research-media-static img { aspect-ratio: 1555 / 710; object-fit: contain; }
+.research-media-static figcaption { padding: 7px 10px; border-top: 1px solid var(--line); background: var(--soft); font-size: .78rem; font-weight: 600; }
 .media-action { position: absolute; right: 14px; bottom: 11px; z-index: 1; display: flex; align-items: center; gap: 6px; color: #fff; font-size: .82rem; font-weight: 700; }
 .media-action svg { width: 17px; height: 17px; fill: currentColor; }
 .authors { color: #41515d; }
@@ -155,6 +159,7 @@ footer p { margin: 10px 0 0; text-align: right; }
   main, footer, .site-nav { width: calc(100% - 28px); }
   main { padding-top: 30px; }
   .profile { grid-template-columns: minmax(0, 1fr) 108px; gap: 18px; }
+  .site-name small { display: none; }
   .bio { display: contents; }
   .bio h1, .bio .role-line { grid-column: 1; }
   .bio h1 { align-self: end; margin-bottom: 0; font-size: clamp(2rem, 9vw, 2.55rem); }

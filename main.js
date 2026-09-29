@@ -18,7 +18,7 @@
   researchItems.forEach((item, index) => { item.dataset.originalOrder = index; });
 
   try {
-    if (localStorage.getItem("grad-application-language") === "zh") language = "zh";
+    if (localStorage.getItem("research-homepage-language") === "zh") language = "zh";
   } catch {}
 
   function updateResearchList() {
@@ -69,7 +69,7 @@
   languageButton.addEventListener("click", () => {
     language = language === "en" ? "zh" : "en";
     renderLanguage();
-    try { localStorage.setItem("grad-application-language", language); } catch {}
+    try { localStorage.setItem("research-homepage-language", language); } catch {}
   });
 
   filterButtons.forEach((button) => {
