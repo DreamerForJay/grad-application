@@ -6,7 +6,7 @@
 <title>Chieh-Lun Yang | 楊杰倫</title>
 <meta name="description" content="Chieh-Lun Yang, computer science undergraduate at NCUE. Research, engineering experience, selected projects, and CV.">
 <meta name="author" content="Chieh-Lun Yang">
-<meta name="theme-color" content="#f7f9fb">
+<meta name="theme-color" content="#12324a">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://xn--zwq108c.tw/grad-application/">
 <meta property="og:title" content="Chieh-Lun Yang | 楊杰倫">
@@ -20,7 +20,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="main.js" defer></script>
 </head>
@@ -32,6 +32,7 @@
 <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span data-en="Menu" data-zh="選單">Menu</span><span aria-hidden="true">＋</span></button>
 <div class="site-menu" id="site-menu">
 <a href="#about" data-en="About" data-zh="關於">About</a>
+<a href="#news" data-en="News" data-zh="近況">News</a>
 <a href="#research" data-en="Research" data-zh="研究">Research</a>
 <a href="#experience" data-en="Experience" data-zh="經歷">Experience</a>
 <a href="#projects" data-en="Projects" data-zh="專案">Projects</a>
@@ -48,6 +49,7 @@
 <p><span data-en="I am an undergraduate student in Computer Science and Information Engineering at" data-zh="我目前就讀於">I am an undergraduate student in Computer Science and Information Engineering at</span> <a href="https://www.ncue.edu.tw/"><span data-en="National Changhua University of Education" data-zh="國立彰化師範大學">National Changhua University of Education</span></a><span data-en=" (NCUE), expecting to graduate in June 2027." data-zh="資訊工程學系，預計於 2027 年 6 月畢業。"> (NCUE), expecting to graduate in June 2027.</span></p>
 <p data-en="My interests include generative AI, computer vision, speech, and software engineering. I enjoy turning research ideas into systems that can be tested and used, and I welcome conversations about research and graduate study." data-zh="我的研究興趣包括生成式 AI、電腦視覺、語音與軟體工程，也喜歡把研究想法實作成可測試、可使用的系統；目前正準備研究所申請，也歡迎研究交流。">My interests include generative AI, computer vision, speech, and software engineering. I enjoy turning research ideas into systems that can be tested and used, and I welcome conversations about research and graduate study.</p>
 <p data-en="My current research includes GEMO3D, accepted at CVGIP 2026, and an ongoing extension of DFDS for color-aware vehicle distance estimation. I am also a Research Intern at ITRI and a teaching assistant at NCUE." data-zh="目前研究包含獲 CVGIP 2026 接收的 GEMO3D，以及延續學長成果、針對不同車色進行車距估測的 DFDS 研究。我也於工研院擔任研究實習生，並擔任彰師大課程助教。">My current research includes GEMO3D, accepted at CVGIP 2026, and an ongoing extension of DFDS for color-aware vehicle distance estimation. I am also a Research Intern at ITRI and a teaching assistant at NCUE.</p>
+<p class="interest-line"><strong data-en="Research interests" data-zh="研究興趣">Research interests</strong><span>Generative AI</span><span>Computer Vision</span><span>Speech</span><span>Software Engineering</span></p>
 <nav class="links" aria-label="Contact and profiles">
 <a href="mailto:cl.yang04@gmail.com">Email</a>
 <a href="assets/Chieh-Lun-Yang-Resume.pdf" target="_blank" rel="noopener">CV</a>
@@ -73,7 +75,21 @@
 
 <section aria-labelledby="research">
 <h2 id="research" data-en="Research" data-zh="研究成果">Research</h2>
-<article class="publication publication-featured">
+<div class="research-controls" aria-label="Research search and filters">
+<label class="search-box" for="research-search">
+<svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+<input id="research-search" type="search" autocomplete="off" data-placeholder-en="Search research" data-placeholder-zh="搜尋研究" placeholder="Search research">
+</label>
+<div class="filter-buttons" role="group" aria-label="Filter research by status">
+<button class="filter-button is-active" type="button" data-filter="all" data-en="All" data-zh="全部">All</button>
+<button class="filter-button" type="button" data-filter="published" data-en="Published" data-zh="已發表">Published</button>
+<button class="filter-button" type="button" data-filter="ongoing" data-en="Ongoing" data-zh="進行中">Ongoing</button>
+</div>
+<label class="sort-box" for="research-sort"><span class="sr-only" data-en="Sort research" data-zh="排序研究">Sort research</span><select id="research-sort"><option value="newest" data-en="Newest first" data-zh="最新優先">Newest first</option><option value="title" data-en="Title A–Z" data-zh="標題 A–Z">Title A–Z</option></select></label>
+</div>
+<p class="results-count" id="research-count" aria-live="polite"></p>
+<div class="research-list" id="research-list">
+<article class="publication publication-featured" data-research-item data-type="published" data-year="2026">
 <a class="research-media" href="https://youtu.be/WyC59Sddipc?si=4ZyhLBBCFSNTAgX4" target="_blank" rel="noopener" aria-label="Watch the GEMO3D project video on YouTube">
 <img src="assets/research/gemo3d-preview.jpg" alt="GEMO3D monocular 3D vehicle detection research preview" width="1200" height="630" loading="lazy">
 <span class="media-action"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span data-en="Watch video" data-zh="觀看影片">Watch video</span></span>
@@ -86,12 +102,14 @@
 <p class="inline-links"><a href="https://drive.google.com/file/d/1hqpspPz32pJ793_-s1BeKXVpCAPegX2W/view?usp=sharing" target="_blank" rel="noopener">Paper</a><a href="https://xn--zwq108c.tw/GEMO3D/">Project Page</a><a href="https://youtu.be/WyC59Sddipc?si=4ZyhLBBCFSNTAgX4" target="_blank" rel="noopener">Video</a><a href="https://cvgip2026.stust.edu.tw/" target="_blank" rel="noopener">Conference</a></p>
 </div>
 </article>
-<article class="publication">
+<article class="publication" data-research-item data-type="ongoing" data-year="2026">
 <h3>DFDS: Color-Aware Monocular Defocus Vehicle Distance Estimation with AI Segmentation and Physical Optics</h3>
 <p class="meta"><span data-en="Ongoing research · 2026 National University–Industry Innovation and Implementation Competition" data-zh="進行中研究 · 2026 全國大專院校產學創新實作競賽">Ongoing research · 2026 National University–Industry Innovation and Implementation Competition</span></p>
 <p data-en="An extension of prior DFDS research that combines Segment Anything, a back-focused single-image setup, CIECAM02 perceptual sharpness, and optimized color-channel weighting for interpretable vehicle distance estimation across different vehicle colors in CARLA." data-zh="延續學長的 DFDS 研究，整合 Segment Anything、後對焦單張影像、CIECAM02 感知清晰度與色彩通道權重最佳化，在 CARLA 中驗證不同車色下具可解釋性的車距估測。">An extension of prior DFDS research that combines Segment Anything, a back-focused single-image setup, CIECAM02 perceptual sharpness, and optimized color-channel weighting for interpretable vehicle distance estimation across different vehicle colors in CARLA.</p>
 <p class="research-result" data-en="Current results: RMSE ≤ 0.38 m for red, green, and blue vehicles; 13.44 FPS on an RTX 5080." data-zh="目前結果：紅、綠、藍車輛 RMSE 皆不超過 0.38 m；RTX 5080 上達 13.44 FPS。">Current results: RMSE ≤ 0.38 m for red, green, and blue vehicles; 13.44 FPS on an RTX 5080.</p>
 </article>
+</div>
+<p class="research-empty" id="research-empty" hidden data-en="No research items match your search." data-zh="找不到符合搜尋條件的研究項目。">No research items match your search.</p>
 </section>
 
 <section aria-labelledby="experience">
@@ -151,6 +169,7 @@
 
 <section aria-labelledby="projects">
 <h2 id="projects" data-en="Selected Projects" data-zh="專案">Selected Projects</h2>
+<div class="project-grid">
 <article class="project">
 <h3>KinSun: Voice-First AI Eldercare Companion</h3>
 <p class="meta" data-en="Team lead / System design · AWS AIWave Hackathon · 2026" data-zh="團隊負責人／系統設計 · AWS AIWave Hackathon · 2026">Team lead / System design · AWS AIWave Hackathon · 2026</p>
@@ -174,6 +193,7 @@
 <p data-en="Designed a digital wellbeing concept using usage analysis, reminders, and attention redirection." data-zh="以使用行為分析、提醒與注意力轉移機制設計數位健康概念。">Designed a digital wellbeing concept using usage analysis, reminders, and attention redirection.</p>
 <p class="inline-links"><a href="https://www.youtube.com/watch?v=78hk0V9nmzQ">Video</a></p>
 </article>
+</div>
 <p class="more-link"><a href="https://github.com/DreamerForJay" target="_blank" rel="noopener"><span data-en="More projects on GitHub" data-zh="在 GitHub 查看更多專案">More projects on GitHub</span></a></p>
 </section>
 
