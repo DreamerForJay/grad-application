@@ -123,11 +123,14 @@ h3 a { color: inherit; }
 .service-list li:last-child .service-axis::before { bottom: calc(100% - 17px); }
 .service-entry { min-width: 0; display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 15px; align-items: start; }
 .service-mark { width: 58px; height: 56px; display: flex; align-items: center; justify-content: center; padding: 5px; background: var(--white); border: 1px solid var(--line); border-radius: 5px; }
+.service-mark[href] { text-decoration: none; transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease; }
+.service-mark[href]:hover { border-color: var(--orange); box-shadow: 0 4px 12px rgba(18,50,74,.1); transform: translateY(-1px); }
 .service-mark img { display: block; width: auto; height: auto; max-width: 46px; max-height: 46px; object-fit: contain; }
 .service-mark-wide img { max-width: 48px; }
 .service-text-mark { color: var(--navy); background: var(--soft); font-size: .72rem; font-weight: 700; letter-spacing: .07em; }
 .service-copy { min-width: 0; }
 .service-copy strong { display: block; color: var(--navy); line-height: 1.35; }
+.service-copy strong a { color: inherit; }
 .service-copy span { display: block; margin-top: 3px; color: #41515d; font-size: .9rem; }
 
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
