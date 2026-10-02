@@ -128,11 +128,11 @@ h3 a { color: inherit; }
 .credentials { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .credentials li { display: grid; grid-template-columns: 108px 52px minmax(0, 1fr) auto; gap: 16px; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--line); }
 .credentials time { color: var(--orange-dark); font-size: .88rem; font-weight: 700; }
-.credential-mark { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: var(--white); border: 1px solid var(--line); border-radius: 5px; }
+.credential-mark { box-sizing: border-box; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; margin: 0; overflow: hidden; background: var(--white); border: 1px solid var(--line); border-radius: 5px; }
 .credential-mark img { display: block; width: 28px; height: 28px; object-fit: contain; }
-.credentials strong, .credentials span { display: block; }
-.credentials strong { color: var(--navy); line-height: 1.35; }
-.credentials span { margin-top: 2px; color: var(--muted); font-size: .9rem; }
+.credentials li > div strong, .credentials li > div span { display: block; }
+.credentials li > div strong { color: var(--navy); line-height: 1.35; }
+.credentials li > div span { margin-top: 2px; color: var(--muted); font-size: .9rem; }
 .credentials a { font-size: .9rem; font-weight: 600; white-space: nowrap; }
 
 footer { margin-top: clamp(3.5rem, 7vw, 5.5rem); padding: 24px 0 36px; border-top: 3px solid var(--navy); color: var(--muted); font-size: .84rem; }
