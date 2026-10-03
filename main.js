@@ -7,10 +7,6 @@
   const siteHeader = document.querySelector(".site-header");
   let language = "en";
 
-  try {
-    if (localStorage.getItem("research-homepage-language") === "zh") language = "zh";
-  } catch {}
-
   function renderLanguage() {
     document.documentElement.lang = language === "en" ? "en" : "zh-Hant";
     document.querySelectorAll("[data-en][data-zh]").forEach((element) => {
@@ -36,7 +32,6 @@
   languageButton.addEventListener("click", () => {
     language = language === "en" ? "zh" : "en";
     renderLanguage();
-    try { localStorage.setItem("research-homepage-language", language); } catch {}
   });
 
   menuButton.addEventListener("click", () => setMenu(!menu.classList.contains("is-open")));
